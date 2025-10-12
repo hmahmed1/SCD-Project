@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forklore Restaurant</title>
+    <link rel="icon" href="/pictures/logo3.jpeg" type="image/x-icon" >
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="project_homepage.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pizza Animation */
+.pizza-animation {
+  text-align: center;
+}
+
+.pizza-animation img {
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+.pizza-animation p {
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Spinning Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+<script>
+    
+  // Show the loading animation and delay navigation
+  function showLoading(event) {
+    event.preventDefault(); // Prevent immediate navigation
+    const loadingOverlay = document.getElementById("loading");
+    loadingOverlay.style.display = "flex"; // Show the loading overlay
+    setTimeout(() => {
+      window.location.href = event.target.href; // Navigate after animation
+    }, 2000); // 2 seconds delay
+  }
+
+
+</script>
+<body>
+    <header class="header">
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <span>
+                <img src="/pictures/logoooo.jpeg" class="logo-img">
+            </span>
+            <a href="project_homepage.html"><h1>FORKLORE</h1></a>
+        </div>
+    
+        <!-- Navigation Section -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="project_homepage.html#foodCarousel">
+                              <i class="fas fa-home" style="color: white;"></i>Home
+
+                            </a>
+                          </li>
+                          
+                          <li class="nav-item dropdown">
+                           <!-- Loading Animation Overlay -->
+<div id="loading" class="loading-overlay">
+    <div class="pizza-animation">
+      <img src="/pictures/Download pizza icon image for free-fotor-bg-remover-20241221123748.png" alt="Processing Pizza" />
+      <p>Processing ...</p>
+    </div>
+  </div>
+  
+  <!-- Menu Button -->
+  <a
+    class="nav-link dropdown-toggle"
+    href="menu.html"
+    id="navbarDropdown"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    onclick="showLoading(event)"
+  >
+    <i class="fas fa-bars"></i> Menu
+  </a>
+  
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="menu.html#burgers">Burgers</a></li>
+                                <li><a class="dropdown-item" href="menu.html#pizzas">Pizzas</a></li>
+                                <li><a class="dropdown-item" href="menu.html#pastas">Pastas</a></li>
+                                <li><a class="dropdown-item" href="menu.html#rice">Rice</a></li>
+                                <li><a class="dropdown-item" href="menu.html#desserts">Desserts</a></li>
+                                <li><a class="dropdown-item" href="menu.html#drinks">Drinks</a></li>
+                                <li><a class="dropdown-item" href="menu.html#starters">Starters</a></li>
+                                <li><a class="dropdown-item" href="menu.html#deals">Deals</a></li>
+                                <li><a class="dropdown-item" href="menu.html#bbq">BBQ</a></li>
+                                
+                            </ul>
+                            
+                        </li>
+                        <li class="nav-item">
+                           <!-- About Us Button -->
+<a
+class="nav-link active"
+href="about.html"
+onclick="showLoading(event)"
+>
+<i class="fas fa-info-circle"></i> About Us
+</a>
+
+                          </li>
+                          
+                          <li class="nav-item">
+                            <!-- Contact Us Button -->
+<a
+class="nav-link"
+href="project_homepage.html#Contact"
+onclick="showLoading(event)"
+>
+<i class="fas fa-envelope"></i> Contact Us
+</a>
+
+                          </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link" href="project_homepage.html#gallery-section">
+                              <i class="fas fa-images"></i> Gallery
+                            </a>
+                          </li>
+                          
+                          <li class="nav-item">
+                           <!-- Statics Button -->
+<a
+class="nav-link"
+href="/statics.html"
+onclick="showLoading(event)"
+>
+<i class="fas fa-chart-bar"></i> Statics
+</a>
+
+                          </li>
+                          
+                          
+                          <li class="nav-item">
+                           <!-- Reviews Button -->
+<a
+class="nav-link"
+href="/reviews.html"
+onclick="showLoading(event)"
+>
+<i class="fas fa-star"></i> Reviews
+</a>
+
+                          </li>
+                          
+                       
+                        <li class="nav-item"><a class="nav-link" href="login.html"><i class="fas fa-user"></i></a></li>
+                        
+                        
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                          </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-bell"></i>
+                                <span id="notification-count" style="font-size: 12px; color: white; background-color: red; border-radius: 50%; padding: 2px 6px; position: relative; top: -10px; left: -5px;">0</span>
+                            </a>
+                        </li>
+                        <li>
+                            <form 
+                                onsubmit="handleSearch(event)" 
+                                style="display: inline; position: relative;">
+                                <input 
+                                    type="text" 
+                                    name="query" 
+                                    id="searchInput" 
+                                    placeholder="Search..." 
+                                    autocomplete="off" 
+                                    style="padding: 5px; border: 1px solid #ccc; border-radius: 20px; width: 200px;"
+                                    oninput="showSuggestions()"
+                                >
+                                <button 
+                                    type="submit" 
+                                    style="padding: 5px 10px; background-color: rgb(255, 204, 65); color: rgb(0, 0, 0); border: none; border-radius: 20px; cursor: pointer;">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                                <ul id="suggestions" 
+                                    style="list-style: none; padding: 0; margin: 5px 0 0; position: absolute; background: rgb(0, 0, 0); color: white; border: 1px solid #ffc400; border-radius: 5px; display: none; width: 200px; z-index: 1000;">
+                                </ul>
+                            </form>
+                        </li>
+                        
+                        <script>
+                            // List of menu items with corresponding anchors
+                            const menuItems = {
+                                "burgers": "/menu.html#burgers",
+                                "pizzas": "/menu.html#pizzas",
+                                "pastas": "/menu.html#pastas",
+                                "rice": "/menu.html#rice",
+                                "desserts": "/menu.html#desserts",
+                                "drinks": "/menu.html#drinks",
+                                "starters": "/menu.html#starters",
+                                "deals": "/menu.html#deals",
+                                "bbq": "/menu.html#bbq"
+                            };
+                        
+                            const suggestionsList = Object.keys(menuItems);
+                        
+                            function showSuggestions() {
+                                const input = document.getElementById('searchInput').value.toLowerCase();
+                                const suggestions = document.getElementById('suggestions');
+                                suggestions.innerHTML = ''; // Clear previous suggestions
+                        
+                                if (input) {
+                                    const filteredSuggestions = suggestionsList.filter(item => item.startsWith(input));
+                                    
+                                    if (filteredSuggestions.length > 0) {
+                                        filteredSuggestions.forEach(item => {
+                                            const li = document.createElement('li');
+                                            li.textContent = item.charAt(0).toUpperCase() + item.slice(1); // Capitalize first letter
+                                            li.style.padding = '5px 10px';
+                                            li.style.cursor = 'pointer';
+                                            li.addEventListener('click', function() {
+                                                document.getElementById('searchInput').value = item; // Set the clicked suggestion
+                                                suggestions.style.display = 'none'; // Hide the suggestions
+                                            });
+                                            suggestions.appendChild(li);
+                                        });
+                                        suggestions.style.display = 'block'; // Show the suggestions
+                                    } else {
+                                        suggestions.style.display = 'none'; // Hide if no match
+                                    }
+                                } else {
+                                    suggestions.style.display = 'none'; // Hide if input is empty
+                                }
+                            }
+                        
+                            function handleSearch(event) {
+                                event.preventDefault(); // Prevent default form submission
+                                const query = document.getElementById('searchInput').value.toLowerCase();
+                                if (menuItems[query]) {
+                                    window.location.href = menuItems[query]; // Redirect to the corresponding anchor
+                                } else {
+                                    alert("No matching menu item found. Please try again.");
+                                }
+                            }
+                        
+                            document.addEventListener('click', function(event) {
+                                const suggestions = document.getElementById('suggestions');
+                                if (!document.getElementById('searchInput').contains(event.target)) {
+                                    suggestions.style.display = 'none'; // Hide suggestions when clicking outside
+                                }
+                            });
+                        </script>
+                        
+                        
+                        
+                </div>
+                
+                
+            
+              
+                <i class="fas fa-none" style="display: inline-block; width: 1em;"></i>
+
+                <div class="d-flex ms-auto">
+                    <!-- Order Now Button -->
+<a
+class="btn btn-primary order-now-btn"
+href="menu.html"
+role="button"
+onclick="showLoading(event)"
+>
+<i class="fas fa-shopping-bag"></i> Order Now          <!-- <i class="fas fa-shopping-bag" style="color: black;"> Order Now</i>-->
+</a>
+
+                  </div>
+                  
+                    </div>
+                  </nav>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <script src="//code.tidio.co/t2i95zjlf6x8kvf0gsbbst577yhxee33.js" async></script>
+
+    <!-- Hero Section -->
+ <section class="hero-section">
+    <div id="foodCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+        <div class="carousel-inner">
+            <!-- Video 1 -->
+            <div class="carousel-item active">
+                <a href="menu.html#burgers">
+                    <video class="d-block w-100" autoplay muted loop disablePictureInPicture style="height: 600px; object-fit: cover;">
+                        <source src="/pictures/videoo1.mp4" type="video/mp4">
+                    </video>
+                </a>
+            </div>
+            <!-- Video 2 -->
+            <div class="carousel-item">
+                <a href="menu.html#deals">
+                    <video class="d-block w-100" autoplay muted loop disablePictureInPicture style="height: 600px; object-fit: cover;">
+                        <source src="/pictures/videoo 2.mp4" type="video/mp4">
+                    </video>
+                </a>
+            </div>
+            <!-- Image 1 -->
+            <div class="carousel-item">
+                <a href="menu.html#pizzas">
+                    <video class="d-block w-100" autoplay muted loop disablePictureInPicture style="height: 600px; object-fit: cover;">
+                        <source src="/pictures/video 3.mp4" type="video/mp4">
+                    </video>
+                </a>
+            </div>
+            <!-- Image 2 -->
+            <div class="carousel-item">
+                <a href="menu.html#bbq">
+                    <video class="d-block w-100" autoplay muted loop disablePictureInPicture style="height: 600px; object-fit: cover;">
+                        <source src="/pictures/video 4.mp4" type="video/mp4">
+                    </video>
+                </a>
+            </div>
+            <!-- Image 3 -->
+            <div class="carousel-item">
+                <a href="menu.html#desserts">
+                    <video class="d-block w-100" autoplay muted loop disablePictureInPicture style="height: 600px; object-fit: cover;">
+                        <source src="/pictures/video 5.mp4" type="video/mp4">
+                    </video>
+                </a>
+            </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <a class="carousel-control-prev" href="#foodCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#foodCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+
+    
+    
+
+    <!-- Mid Section -->
+    <section class="mid-section text-center">
+        <div class="container">
+           
+           <a 
+  href="menu.html" 
+  class="btn btn-primary" 
+  onclick="showLoading(event)"
+>
+  Explore Our Menu
+</a>
+
+        </div>
+    </section>
+
+<!-- Menu Section -->
+<section id="menu-section" class="menu-section text-center">
+    <div class="container">
+        <p><br><br></p>
+
+
+        <h2 class="section-title"><br><br>Our Menu</h2>
+        <p class="section-description">Discover our delicious selection of meals, crafted to perfection.</p>
+
+        <!-- Image Grid Section -->
+        <div class="menu-gallery">
+            <figure class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="menu.html#starters">
+                    <img src="/pictures/soup.png" class="img-fluid" alt="Menu Item 1">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="menu.html#bbq">
+                    <img src="/pictures/Forklore1.png" class="img-fluid" alt="Menu Item 2">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="menu.html#drinks">
+                    <img src="/pictures/Forklore2.png" class="img-fluid" alt="Menu Item 3">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="menu.html#desserts">
+                    <img src="/pictures/Forklore3.png" class="img-fluid" alt="Menu Item 4">
+                    </a>
+                </div>
+                
+            </figure>
+        </div>
+
+        <!-- Menu Items Section -->
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="menu-item">
+                    <h3><a href="menu.html#starters" class="menu-link">Starter</a></h3>
+                    <p>Fish Crackers - $4</p>
+                    <p>Garlic Bread - $5</p>
+                    <p>Soup of the Day - $5.5</p>
+                </div>
+                
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="menu-item">
+                    <h3><a href="menu.html#bbq" class="menu-link">BBQ</a></h3>
+                    <p>Grilled Chicken - $18</p>
+                    <p>Beef Steak - $22</p>
+                    <p>Alfredo Pasta - $16</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="menu-item">
+                    <h3><a href="menu.html#drinks" class="menu-link">Drinks</a></h3>
+                    <p>Fresh Lime Soda - $4</p>
+                    <p>Cold Coffee - $5</p>
+                    <p>Mango Smoothie - $6</p>
+                    
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="menu-item">
+                    <h3><a href="menu.html#desserts" class="menu-link">Desserts</a></h3>
+                    <p>Chocolate Cake - $9</p>
+                    <p>Donuts - $8</p>
+                    <p>Ice Cream Sundae - $7</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<script src="//code.tidio.co/t2i95zjlf6x8kvf0gsbbst577yhxee33.js" async></script>
+<!-- Gallery Section -->
+<section id="gallery-section" class="gallery-section text-center">
+    <div class="container">
+        <h2 class="section-title">Our Gallery</h2>
+        <p class="section-description">A glimpse of our delicious meals and inviting ambiance.</p>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <img src="/pictures/BBQ.jpeg" class="img-fluid" alt="Dish 1">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img src="/pictures/pasta.jpeg" class="img-fluid" alt="Dish 2">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img src="/pictures/dish.jpeg" class="img-fluid" alt="Dish 3">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img src="/pictures/gallery.png" class="img-fluid" alt="Dish 4">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img src="/pictures/gallery1.png" class="img-fluid" alt="Restaurant Interior 1">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img src="/pictures/gallery2.png" class="img-fluid" alt="Restaurant Interior 2">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer bg-dark text-light">
+    <div class="container">
+        <div class="row">
+            <!-- Contact and Links -->
+            <div id="Contact" class="col-md-6">
+                <h4>Contact Us</h4>
+                <p>If you have any questions or would like to make a reservation, feel free to reach out!</p>
+
+                <!-- Contact Form -->
+                <form id="contact-form" action="#" method="GET" class="contact-form mt-3">
+                    <div class="form-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" name="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+            </div>
+
+            <!-- Social Media and Subscription -->
+            <div class="col-md-6 text-md-right">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://instagram.com" class="text-light mr-3"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" class="text-light mr-3"><i class="fab fa-facebook"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to our Newsletter</h4>
+                    <form id="subscribe-form" method="GET" class="subscribe-form">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>                    
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="login.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
