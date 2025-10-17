@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 320px; /* Width to accommodate text */
+}
+
+.form-toggle {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff6f61; /* Theme color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%; /* Full width button */
+}
+
+.form-container {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.form-container.active {
+    transform: translateY(0);
+}
+
+.form {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px; /* Space below heading */
+    font-size: 24px; /* Font size for headings */
+    padding: 10px 0; /* Padding for better spacing */
+    margin-top: 0; /* Remove top margin */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6f61; /* Theme color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff5a48;
+}
+
+p {
+    margin: 10px 0;
+    text-align: center; /* Center align paragraph text */
+}
+
+.link {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda; /* Success message background */
+    color: #155724; /* Success message text */
+    border: 1px solid #c3e6cb; /* Success message border */
+    border-radius: 5px;
+    text-align: center; /* Center align message text */
+    display: none; /* Initially hidden */
+}
+/* Styling the burger items */
+.burger-item {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    border: 1px solid #ddd; /* Optional border for better visibility */
+    border-radius: 5px;
+}
+
+/* Scale the entire item and add shadow on hover */
+.burger-item:hover {
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Highlight the image when hovered */
+.burger-item:hover img {
+    transform: scale(1.1); /* Slightly zoom in the image */
+}
+
+/* Ensure the image transition is smooth */
+.burger-item img {
+    width: 100%; /* Adjust as needed */
+    max-width: 150px;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}

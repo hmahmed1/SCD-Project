@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Forklore Restaurant</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon" >
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="project_homepage.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+  /* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.pizza-animation {
+  text-align: center;
+  color: white;
+}
+
+.pizza-animation img {
+  width: 100px;
+  height: auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+<script>
+  function showLoading(event) {
+    event.preventDefault(); // Prevent immediate navigation
+
+    // Show the loading overlay
+    const loadingOverlay = document.getElementById("loading");
+    loadingOverlay.style.display = "flex";
+
+    // After the animation delay (2 seconds), navigate to the Menu page
+    setTimeout(function () {
+      window.location.href = event.target.href; // Navigate after animation
+    }, 2000); // 2 seconds delay for the loading animation
+  }
+</script>
+<!-- Loading Animation Overlay -->
+<div id="loading" class="loading-overlay">
+  <div class="pizza-animation">
+    <img src="/pictures/Download pizza icon image for free-fotor-bg-remover-20241221123748.png" alt="Processing Pizza" />
+    <p>Loading Home...</p>
+  </div>
+</div>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <span>
+                <img src="/pictures/logoooo.jpeg" class="logo-img">
+            </span>
+            <a href="project_homepage.html"><h1>FORKLORE</h1></a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a
+                          class="nav-link"
+                          href="project_homepage.html#foodCarousel"
+                          onclick="showLoading(event)"
+                        >
+                          <i class="fas fa-home"></i> Home
+                        </a>
+                        
+                          </li>
+                        <li class="nav-item">
+                          <a
+                          class="nav-link dropdown-toggle"
+                          href="menu.html"
+                          id="navbarDropdown"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                          onclick="showLoading(event)"
+                        >
+                          <i class="fas fa-bars"></i> Menu
+                        </a>
+                        
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">
+                              <i class="fas fa-info-circle" style="color: white;"></i> About Us
+
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="project_homepage.html#Contact">
+                              <i class="fas fa-envelope"></i> Contact Us
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="project_homepage.html#gallery-section">
+                              <i class="fas fa-images"></i> Gallery
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/statics.html">
+                              <i class="fas fa-chart-bar"></i> Statics
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/reviews.html">
+                              <i class="fas fa-star"></i> Reviews
+                            </a>
+                          </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html"><i class="fas fa-user"></i></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search"></i></a></li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-bell"></i>
+                                <span id="notification-count" style="font-size: 12px; color: white; background-color: red; border-radius: 50%; padding: 2px 6px; position: relative; top: -10px; left: -5px;">0</span>
+                            </a>
+                        </li>
+                        </li>
+                    </ul>
+                    <i class="fas fa-none" style="display: inline-block; width: 1em;"></i>
+                    <div class="d-flex ms-auto">
+                      <a class="btn btn-primary order-now-btn" href="menu.html" role="button">
+                        <i class="fas fa-shopping-bag"></i> Order Now
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script src="//code.tidio.co/t2i95zjlf6x8kvf0gsbbst577yhxee33.js" async></script>
+    <!-- About Us Section -->
+    <section class="about-section text-center">
+        <div class="container">
+            <br>
+            <h2 class="section-title">About Forklore</h2>
+            <p class="section-description">At Forklore, we believe that every dish has a story to tell. Our journey began with a passion for bringing diverse culinary traditions to life, crafting memorable dining experiences that celebrate culture and community.</p>
+            <p class="section-description">Our talented chefs use only the freshest ingredients, blending flavors and techniques from around the globe. We pride ourselves on our commitment to quality and sustainability, ensuring that each meal not only delights the palate but also nourishes the body and soul.</p>
+            <p class="section-description">Join us as we explore the rich tapestry of flavors that define our identity. At Forklore, we’re not just serving food; we’re sharing the love of culinary art.</p>
+            <p class="section-description">With every bite, we aim to transport you to a world of taste and tradition. From our signature dishes to seasonal specials, each recipe is a result of hours of experimentation, love, and dedication in our kitchen.</p>
+<p class="section-description">We believe food is a universal language that connects people, breaking down barriers and building bridges. At Forklore, every meal is a celebration of togetherness, bringing friends, families, and communities closer with every shared table.</p>
+
+
+<p class="section-description">We invite you to embark on a gastronomic adventure with us. Discover the magic of flavors, textures, and aromas that tell stories from around the world, crafted with care and served with warmth at Forklore.</p>
+<p><br><br></p>
+<p><br><br></p>
+
+
+        </div>
+    </section>
+
+    
+
+    <!-- Footer Section -->
+    <footer class="footer bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Contact Us</h4>
+                    <p>If you have any questions or would like to make a reservation, feel free to reach out!</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <h4>Follow Us</h4>
+                    <a href="https://facebook.com" class="text-light mr-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-light mr-3"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" class="text-light mr-3"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

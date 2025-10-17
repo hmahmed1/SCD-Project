@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forklore Restaurant</title>
+    <link rel="icon" href="/pictures/logo3.jpeg" type="image/x-icon" >
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="project_homepage.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<style>
+		
+.form-container {
+    background-color: #333;
+    padding: 15px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: auto; /* Ensures height adjusts automatically */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffd900; /* Yellow color for headings */
+    font-weight: bold; /* Makes the text bold */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffd900; /* Yellow color for labels */
+    text-align: left; /* Ensures the label aligns to the left */
+    font-weight: bold; /* Makes the text bold */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.confirm-button {
+    width: 100%;
+    padding: 10px;
+	background-color: rgb(255, 204, 65);;
+	color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.confirm-button:hover {
+    background-color: #45a049;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 5px;
+}
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.confirm-animation {
+  text-align: center;
+  color: white;
+}
+
+.confirm-animation img {
+  width: 100px;
+  height: auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+    </style>
+
+</head>
+<script>
+    function submitForm() {
+      // Logic to handle form submission (e.g., validate and submit)
+      console.log("Form submitted!");
+      // Simulate a delay for demonstration purposes
+      setTimeout(() => {
+        // Redirect or perform another action after submission
+        window.location.href = "success.html"; // Replace with the actual success page
+      }, 2000); // Adjust the delay as needed
+    }
+  
+    function showLoading() {
+      // Show the loading animation
+      const loadingOverlay = document.getElementById("loading");
+      loadingOverlay.style.display = "flex";
+    }
+  </script>
+<!-- Loading Animation Overlay -->
+<div id="loading" class="loading-overlay">
+  <div class="confirm-animation">
+    <img src="/pictures/Download pizza icon image for free-fotor-bg-remover-20241221123748.png" alt="Processing" />
+    <p>Processing your request...</p>
+  </div>
+</div>
+  
+<body>
+	<header class="header">
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <span>
+                <img src="/pictures/logoooo.jpeg" class="logo-img">
+            </span>
+            <a href="project_homepage.html"><h1>FORKLORE</h1></a>
+        </div>
+    
+        <!-- Navigation Section -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="project_homepage.html#foodCarousel">
+                              <i class="fas fa-home"></i>Home
+                            </a>
+                          </li>
+                          
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="menu.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bars"></i> Menu
+                              </a>
+                              
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#burgers">Burgers</a></li>
+                                <li><a class="dropdown-item" href="#pizzas">Pizzas</a></li>
+                                <li><a class="dropdown-item" href="#pastas">Pastas</a></li>
+                                <li><a class="dropdown-item" href="#rice">Rice</a></li>
+                                <li><a class="dropdown-item" href="#desserts">Desserts</a></li>
+                                <li><a class="dropdown-item" href="#drinks">Drinks</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">
+                              <i class="fas fa-info-circle"></i> About Us
+                            </a>
+                          </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link" href="project_homepage.html#Contact">
+                              <i class="fas fa-envelope"></i> Contact Us
+                            </a>
+                          </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link" href="project_homepage.html#gallery-section">
+                              <i class="fas fa-images"></i> Gallery
+                            </a>
+                          </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link" href="/statics.html">
+                              <i class="fas fa-chart-bar"></i> Statics
+                            </a>
+                          </li>
+                          
+                          
+                          <li class="nav-item">
+                            <a class="nav-link" href="/reviews.html">
+                              <i class="fas fa-star"></i> Reviews
+                            </a>
+                          </li>
+                          
+                       
+                        <li class="nav-item"><a class="nav-link" href="login.html"><i class="fas fa-user"></i></a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search"></i></a></li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-bell"></i>
+                                <span id="notification-count" style="font-size: 12px; color: white; background-color: red; border-radius: 50%; padding: 2px 6px; position: relative; top: -10px; left: -5px;">0</span>
+                            </a>
+                        </li>
+                          
+                    </ul>
+                </div>
+                <i class="fas fa-none" style="display: inline-block; width: 1em;"></i>
+                <i class="fas fa-none" style="display: inline-block; width: 1em;"></i>
+               
+                
+
+                <div class="d-flex ms-auto">
+                    <a class="btn btn-primary order-now-btn" href="menu.html" role="button">
+                      <i class="fas fa-shopping-bag"></i> Order Now
+                    </a>
+                  </div>
+                  
+                    </div>
+                  </nav>
+            </div>
+        </nav>
+    </header>
+	
+    <section>
+      <div class="form-container">
+          <h2>Delivery Address</h2>
+          <form id="deliveryForm">
+              <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name">
+              </div>
+              <div class="form-group">
+                  <label for="address">Address:</label>
+                  <input type="text" id="address" name="address" placeholder="Enter your address">
+              </div>
+              <div class="form-group">
+                  <label for="area">Area:</label>
+                  <input type="text" id="area" name="area" placeholder="Enter your area">
+              </div>
+              <div class="form-group">
+                  <label for="street">Street Name:</label>
+                  <input type="text" id="street" name="street" placeholder="Enter your street name">
+              </div>
+              <div class="form-group">
+                  <label for="phone">Phone No:</label>
+                  <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+              </div>
+              <div class="form-group">
+                  <label for="email">E-mail:</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email">
+              </div>
+              <button 
+  type="button" 
+  class="confirm-button" 
+  onclick="submitForm(); showLoading();"
+>
+  Confirm
+</button>
+
+          </form>
+          <div id="message" class="message" style="display: none;"></div>
+      </div>
+  
+      <script>
+          function submitForm() {
+              // Get form inputs
+              const name = document.getElementById('name').value.trim();
+              const address = document.getElementById('address').value.trim();
+              const area = document.getElementById('area').value.trim();
+              const street = document.getElementById('street').value.trim();
+              const phone = document.getElementById('phone').value.trim();
+              const email = document.getElementById('email').value.trim();
+              const messageDiv = document.getElementById('message');
+  
+              // Clear previous messages
+              messageDiv.style.display = 'none';
+  
+              // Check if all fields are filled
+              if (!name || !address || !area || !street || !phone || !email) {
+                  messageDiv.className = 'message error';
+                  messageDiv.innerHTML = '<span class="icon">&#9888;</span> Please fill all fields and try again.';
+                  messageDiv.style.display = 'block';
+              } else {
+                  // Display success message
+                  messageDiv.className = 'message success';
+                  messageDiv.innerHTML = '<span class="icon">&#128515;</span> Your Order Has Been Placed Successfully!';
+                  messageDiv.style.display = 'block';
+  
+                  // Wait for 3 seconds before redirecting to the homepage
+                  setTimeout(function () {
+                      window.location.href = "project_homepage.html"; // Redirect to your desired page
+                  }, 3000);
+  
+                  // Optionally, reset the form
+                  document.getElementById('deliveryForm').reset();
+              }
+          }
+      </script>
+  
+      <style>
+          .message {
+              margin-top: 20px;
+              padding: 10px;
+              border-radius: 5px;
+              font-size: 1rem;
+              text-align: center;
+          }
+  
+          .message.success {
+              background-color: #4caf50;
+              color: #fff;
+          }
+  
+          .message.error {
+              background-color: #f44336;
+              color: #fff;
+          }
+  
+          .confirm-button {
+              margin-top: 20px;
+              padding: 10px 20px;
+              background-color: #ffcc00;
+              color: #222;
+              border: none;
+              border-radius: 5px;
+              font-size: 1rem;
+              cursor: pointer;
+              transition: background-color 0.3s;
+          }
+  
+          .confirm-button:hover {
+              background-color: #ff9900;
+          }
+      </style>
+  </section>
+  
+	 <!-- Footer Section -->
+	 <footer class="footer bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Contact Us</h4>
+                    <p>If you have any questions or would like to make a reservation, feel free to reach out!</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <h4>Follow Us</h4>
+                    <a href="https://facebook.com" class="text-light mr-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-light mr-3"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" class="text-light mr-3"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
