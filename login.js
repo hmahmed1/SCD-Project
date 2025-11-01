@@ -50,72 +50,51 @@ function validatePhone(phone) {
 }
 
 // Login functionality
-document.getElementById("login-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.getElementById("login-form").addEventListener("submit", async function(event) {
+  event.preventDefault();
 
-    const email = document.getElementById("login-email").value;
-    const password = document.getElementById("login-password").value;
+  const email = document.getElementById("login-email").value;
+  const password = document.getElementById("login-password").value;
 
-    let registeredAccounts = JSON.parse(localStorage.getItem("registeredAccounts")) || [];
+  const response = await fetch("http://localhost:5000/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password })
+  });
 
-    const user = registeredAccounts.find(account => account.email === email);
+  const data = await response.json();
+  alert(data.message);
 
-    if (user) {
-        if (user.password === password) {
-            alert("Login successful!");
-            window.location.href = "detail.html";
-        } else {
-            alert("Incorrect password. Please try again.");
-        }
-    } else {
-        alert("Account not found. Please sign up first.");
-        showSignup();
-    }
+  if (response.ok) {
+    window.location.href = "detail.html";
+  }
 });
 
+
 // Signup functionality
-document.getElementById("signup-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.getElementById("signup-form").addEventListener("submit", async function(event) {
+  event.preventDefault();
 
-    const email = document.getElementById("signup-email").value;
-    const password = document.getElementById("signup-password").value;
-    const confirmPassword = document.getElementById("confirm-password").value;
-    const phone = document.getElementById("signup-phone").value;
+  const firstName = document.getElementById("fname").value;
+  const lastName = document.getElementById("lname").value;
+  const email = document.getElementById("signup-email").value;
+  const phone = document.getElementById("signup-phone").value;
+  const password = document.getElementById("signup-password").value;
+  const confirmPassword = document.getElementById("confirm-password").value;
 
-    let registeredAccounts = JSON.parse(localStorage.getItem("registeredAccounts")) || [];
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
 
-    // Check email format
-    if (!validateEmail(email)) {
-        alert("Please enter a valid email.");
-        return;
-    }
+  const response = await fetch("http://localhost:5000/signup", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ firstName, lastName, email, phone, password })
+  });
 
-    // Check password complexity
-    if (!validatePassword(password)) {
-        alert("Password must be at least 8 characters long and include one uppercase letter, one number, and one special character.");
-        return;
-    }
+  const data = await response.json();
+  alert(data.message);
 
-    // Check password match
-    if (password !== confirmPassword) {
-        alert("Passwords do not match. Please try again.");
-        return;
-    }
-
-    // Check phone format
-    if (!validatePhone(phone)) {
-        alert("Please enter a valid 10-digit phone number.");
-        return;
-    }
-
-    if (registeredAccounts.some(account => account.email === email)) {
-        alert("This email is already registered. Please use a different email or log in.");
-        return;
-    }
-
-    registeredAccounts.push({ email: email, password: password, phone: phone });
-    localStorage.setItem("registeredAccounts", JSON.stringify(registeredAccounts));
-
-    alert("Sign up successful! Redirecting to login page...");
-    showLogin();
+  if (response.ok) showLogin();
 });
