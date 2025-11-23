@@ -307,77 +307,188 @@
         </div>
     
         <!-- Navigation Section -->
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html#foodCarousel">
-                            <i class="fas fa-home"></i>Home
-                          </a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="menu.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-bars"></i> Menu
-                              </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#burgers">Burgers</a></li>
-                                <li><a class="dropdown-item" href="#pizzas">Pizzas</a></li>
-                                <li><a class="dropdown-item" href="#pastas">Pastas</a></li>
-                                <li><a class="dropdown-item" href="#rice">Rice</a></li>
-                                <li><a class="dropdown-item" href="#desserts">Desserts</a></li>
-                                <li><a class="dropdown-item" href="#drinks">Drinks</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link active" href="about.html">
-                            <i class="fas fa-info-circle"></i> About Us
-                          </a></li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="index.html#Contact">
-                              <i class="fas fa-envelope"></i> Contact Us
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="index.html#gallery-section">
-                              <i class="fas fa-images"></i> Gallery
-                            </a>
-                          </li>
- 
-                          <li class="nav-item">
-                            <a class="nav-link" href="/reviews.html">
-                              <i class="fas fa-star"></i> Reviews
-                            </a>
-                          </li>
-                        <li class="nav-item"><a class="nav-link" href="login.html"><i class="fas fa-user"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="tel:+123456789"><i class="fas fa-phone-alt"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search"></i></a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
-                          </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-bell"></i>
-                                <span id="notification-count" style="font-size: 12px; color: white; background-color: red; border-radius: 50%; padding: 2px 6px; position: relative; top: -10px; left: -5px;">0</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <i class="fas fa-none" style="display: inline-block; width: 1em;"></i>
-                <i class="fas fa-none" style="display: inline-block; width: 1em;"></i>
-                <i class="fas fa-none" style="display: inline-block; width: 1em;"></i>
-                <i class="fas fa-none" style="display: inline-block; width: 1em;"></i>
-              
-           
-                
-                <div class="d-flex ms-auto">
-                    <a class="btn btn-primary order-now-btn" href="menu.html" role="button">
-                      <i class="fas fa-shopping-bag"></i> Order Now
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+
+            <!-- Left side intentionally left empty to create spacing -->
+            <div></div>
+
+            <!-- RIGHT SIDE NAV ITEMS -->
+            <ul class="navbar-nav ms-auto gap-3">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#foodCarousel">
+                        <i class="fas fa-home"></i> Home
                     </a>
-                  </div>
-                  
-            </div>
-        </nav>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="menu.html" id="navbarDropdown" 
+                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-bars"></i> Menu
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#burgers">Burgers</a></li>
+                        <li><a class="dropdown-item" href="#pizzas">Pizzas</a></li>
+                        <li><a class="dropdown-item" href="#pastas">Pastas</a></li>
+                        <li><a class="dropdown-item" href="#rice">Rice</a></li>
+                        <li><a class="dropdown-item" href="#desserts">Desserts</a></li>
+                        <li><a class="dropdown-item" href="#drinks">Drinks</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">
+                        <i class="fas fa-info-circle"></i> About Us
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#Contact">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#gallery-section">
+                        <i class="fas fa-images"></i> Gallery
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reviews.html">
+                        <i class="fas fa-star"></i> Reviews
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-bell"></i>
+                        <span id="notification-count" 
+                              style="font-size: 12px; color: white; background-color: red; 
+                              border-radius: 50%; padding: 2px 6px; position: relative; 
+                              top: -10px; left: -5px;">0</span>
+                    </a>
+                </li>
+
+                <!-- SEARCH BAR -->
+                <li class="nav-item">
+                    <form onsubmit="handleSearch(event)" style="display: inline; position: relative;">
+                        <input 
+                            type="text" name="query" id="searchInput" placeholder="Search..." 
+                            autocomplete="off"
+                            style="padding: 5px; border: 1px solid #ccc; 
+                                   border-radius: 20px; width: 200px;"
+                            oninput="showSuggestions()">
+
+                        <button type="submit"
+                            style="padding: 5px 10px; background-color: rgb(255, 204, 65); 
+                                   color: black; border: none; border-radius: 20px; cursor: pointer;">
+                            <i class="fas fa-search"></i>
+                        </button>
+
+                        <ul id="suggestions" 
+                            style="list-style: none; padding: 0; margin: 5px 0 0; 
+                                   position: absolute; background: black; color: white; 
+                                   border: 1px solid #ffc400; border-radius: 5px; 
+                                   display: none; width: 200px; z-index: 1000;">
+                        </ul>
+                    </form>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const menuItems = {
+        "burgers": "/SCD-Project/menu.html#burgers",
+        "pizzas": "/SCD-Project/menu.html#pizzas",
+        "pastas": "/SCD-Project/menu.html#pastas",
+        "rice": "/SCD-Project/menu.html#rice",
+        "desserts": "/SCD-Project/menu.html#desserts",
+        "drinks": "/SCD-Project/menu.html#drinks",
+        "starters": "/SCD-Project/menu.html#starters",
+        "deals": "/SCD-Project/menu.html#deals",
+        "bbq": "/SCD-Project/menu.html#bbq"
+    };
+
+    const suggestionsList = Object.keys(menuItems);
+
+    function showSuggestions() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const suggestions = document.getElementById('suggestions');
+        suggestions.innerHTML = '';
+
+        if (input) {
+            const filtered = suggestionsList.filter(item => item.startsWith(input));
+
+            if (filtered.length > 0) {
+                filtered.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item.charAt(0).toUpperCase() + item.slice(1);
+                    li.style.padding = '5px 10px';
+                    li.style.cursor = 'pointer';
+
+                    li.addEventListener('click', () => {
+                        document.getElementById('searchInput').value = item;
+                        suggestions.style.display = 'none';
+                    });
+
+                    suggestions.appendChild(li);
+                });
+
+                suggestions.style.display = 'block';
+            } else {
+                suggestions.style.display = 'none';
+            }
+
+        } else {
+            suggestions.style.display = 'none';
+        }
+    }
+
+    function handleSearch(event) {
+        event.preventDefault();
+        const query = document.getElementById('searchInput').value.toLowerCase();
+
+        if (menuItems[query]) {
+            window.location.href = menuItems[query];
+        } else {
+            alert("No matching menu item found. Please try again.");
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const suggestions = document.getElementById('suggestions');
+        if (!document.getElementById('searchInput').contains(event.target)) {
+            suggestions.style.display = 'none';
+        }
+    });
+</script>
+
     </header>
     
     <script src="//code.tidio.co/t2i95zjlf6x8kvf0gsbbst577yhxee33.js" async></script>
